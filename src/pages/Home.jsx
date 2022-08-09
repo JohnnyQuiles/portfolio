@@ -1,28 +1,37 @@
 import React from 'react';
 import Layout from '../component/Layout';
+import { AiOutlineGithub } from "@react-icons/all-files/ai/AiOutlineGithub";
+import { AiOutlineFacebook } from "@react-icons/all-files/ai/AiOutlineFacebook"
+import { AiOutlineInstagram } from "@react-icons/all-files/ai/AiOutlineInstagram";
+import { AiOutlineLinkedin } from '@react-icons/all-files/ai/AiOutlineLinkedin'
 import { Box, Container } from '@mui/material';
+import Me from '../images/me.jpeg'
 import '../App.css';
 
 const Home = () => {
     return (
-        <Layout>
-            <h1 className='sub'>Hello, my name is <br /> <span className='span'>Johnny Quiles</span></h1>
+        <Layout> 
+            <br/>
+            
+            <h1 className='sub'>Hello, my name is <br />
+            <span className='span'>Johnny Quiles</span></h1>
+            
+            <Box height='48vh' maxWidth='100%' style={{ display: 'flex', justifyContent: 'center' }}>
+            <img src={Me} alt='Me' style={{ borderRadius: '3px' }}></img>
+            </Box>
+
+            
+            <br />
             <br />
 
-            <Box className='box' maxWidth='35%' style={{ background: '#011627', color: 'white' }}>
-                <h1 className='sub'>About me</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, dolorum.
-                    Quisquam aspernatur ab, consequuntur assumenda enim accusamus animi aperiam
-                    quis dignissimos quidem magni omnis consequatur molestiae. Dolore pariatur quibusdam amet.</p>
-            </Box>
 
-            <Box className='box' maxWidth='35%' style={{ background: '#011627', color: 'white' }}>
-                <h1 className='sub'>About me</h1>
+            <Box maxWidth='100%' style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+            <a href='https://github.com/JohnnyQuiles' style={{ color: 'black', fontSize: '50px', }}><AiOutlineGithub /></a>
+            <a href='https://www.facebook.com/profile.php?id=100071113208049' style={{ color: '#4267B2', fontSize: '50px', }}><AiOutlineFacebook /></a>
+            <a href='https://www.instagram.com/?hl=en' style={{ color: '#fb3958', fontSize: '50px', }}><AiOutlineInstagram /></a>
+            <a href='https://www.linkedin.com/in/johnny-quiles-618976191/' style={{ color: '#0077b5', fontSize: '50px',}}><AiOutlineLinkedin /></a>
             </Box>
-
-            <Box className='box' maxWidth='35%' style={{ background: '#011627', color: 'white' }}>
-                <h1 className='sub'>About me</h1>
-            </Box>
+            
         </Layout>
     )
 };
