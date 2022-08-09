@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
 .App {
-  text-align: center;
+  background:#011627;
 }
 
 .logo{
@@ -11,25 +12,32 @@
   text-align: center;
   
 }
-/* .logo:hover{
+.logo:hover{
   transition: transform 500ms ease-in-out;
   animation: dance 1s linear infinite 500ms;
-} */
+}
 
 .navbar {
   font-family: 'Racing Sans One', cursive;
   text-decoration: none;
+  color: #F7F9F7;
 }
 .navbar:hover {
   color: crimson;
 }
- .Link {
-  color: green
+
+.sub{
+  text-align: center;
+  font-family: 'Bungee Shade', cursive;
 }
 
-/* @keyframes dance {
+.span{
+  color: crimson;
+}
+
+@keyframes dance {
   0% {transform: rotate(0);}
   25%{transform: rotate(15deg);}
   50%{transform: rotate(-0);}
   75%{transform: rotate(-15deg);}
-} */
+}

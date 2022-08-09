@@ -1,14 +1,17 @@
 import React from 'react';
 import { AppBar, Box, Toolbar } from '@mui/material';
 import { Link } from 'react-router-dom';
+
 import '../App.css';
 
 const NavBar = () => {
     return (
-        <Box sx={{ flexGrow: 1, }}>
-            <AppBar position="static" style={{ borderRadius: '3px' }}>
-                <Link to='/' style={{ textDecoration: 'none'}}>
-                <h1 className='logo'>Jquiles</h1>
+        <div className="App">
+        <Box sx={{ flexGrow: 1 }}>
+
+            <AppBar position="static" style={{ background: "#011627"}}>
+                <Link to='/' style={{ textDecoration: 'none' }}>
+                    <h1 className='logo'>Jquilesjr</h1>
                 </Link>
 
                 <Toolbar style={{
@@ -16,9 +19,6 @@ const NavBar = () => {
                     justifyContent: 'space-between',
                     alignContent: 'center',
                 }}>
-                    <Link className='navbar' to='/' style={{ color: 'white', textDecoration: 'none' }}>
-                        <h3 className='navbar'>Home</h3>
-                    </Link>
 
                     <Link className='navbar' to='about' style={{ color: 'white', textDecoration: 'none' }}>
                         <h3 className='navbar'>About</h3>
@@ -34,7 +34,9 @@ const NavBar = () => {
 
                 </Toolbar>
             </AppBar>
-        </Box >
+        </Box>
+        </div>
     )
 };
+
 export default NavBar;
