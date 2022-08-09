@@ -1,8 +1,8 @@
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material';
 
-const PURPLE = '#6750A4';
-const BLUE = '#EDF2F4';
+// const PURPLE = '#6750A4';
+const BLUE = '#011627';
 
 const THEME = createTheme({
     palette: {
@@ -10,7 +10,7 @@ const THEME = createTheme({
             main:BLUE,
         },
         secondary: {
-            main: PURPLE,
+            main: BLUE,
         },
     },
 
