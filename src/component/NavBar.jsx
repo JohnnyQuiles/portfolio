@@ -20,15 +20,15 @@ const NavBar = () => {
                     alignContent: 'center',
                 }}>
 
-                    <Link className='navbar' to='about' style={{ color: 'white', textDecoration: 'none' }}>
+                    <Link className='navbar' to='/about' style={{ color: 'white', textDecoration: 'none' }}>
                         <h3 className='navbar'>About</h3>
                     </Link>
 
-                    <Link className='navbar' to='contact' style={{ color: 'white', textDecoration: 'none' }}>
+                    <Link className='navbar' to='/contact' style={{ color: 'white', textDecoration: 'none' }}>
                         <h3 className='navbar'>Contact</h3>
                     </Link>
 
-                    <Link className='navbar' to='projects' style={{ color: 'white', textDecoration: 'none' }}>
+                    <Link className='navbar' to='/projects' style={{ color: 'white', textDecoration: 'none' }}>
                         <h3 className='navbar'>Projects</h3>
                     </Link>
 
