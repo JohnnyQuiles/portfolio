@@ -1,42 +1,31 @@
 import React from 'react';
-import { AppBar, Box, Toolbar } from '@mui/material';
+import { Box,  Toolbar } from '@mui/material';
+import { AiOutlineGithub } from "@react-icons/all-files/ai/AiOutlineGithub";
+import { AiOutlineFacebook } from "@react-icons/all-files/ai/AiOutlineFacebook"
+import { AiOutlineInstagram } from "@react-icons/all-files/ai/AiOutlineInstagram";
+import { AiOutlineLinkedin } from '@react-icons/all-files/ai/AiOutlineLinkedin'
 import { Link } from 'react-router-dom';
-
+import { Container, Header, Content, Footer, Sidebar } from 'rsuite';
 import '../App.css';
 
 const NavBar = () => {
     return (
-        <div className="App">
-        <Box sx={{ flexGrow: 1 }}>
-
-            <AppBar position="static" style={{ background: "#011627"}}>
-                <Link to='/' style={{ textDecoration: 'none' }}>
-                    <h1 className='logo'>Jquilesjr</h1>
-                </Link>
-
-                <Toolbar style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignContent: 'center',
-                }}>
-
-                    <Link className='navbar' to='/about' style={{ color: 'white', textDecoration: 'none' }}>
-                        <h3 className='navbar'>About</h3>
-                    </Link>
-
-                    <Link className='navbar' to='/contact' style={{ color: 'white', textDecoration: 'none' }}>
-                        <h3 className='navbar'>Contact</h3>
-                    </Link>
-
-                    <Link className='navbar' to='/projects' style={{ color: 'white', textDecoration: 'none' }}>
-                        <h3 className='navbar'>Projects</h3>
-                    </Link>
-
-                </Toolbar>
-            </AppBar>
-        </Box>
-        </div>
-    )
+        <>
+            <Link to='/' style={{ textDecoration: 'none', alignItems: 'center', }}>
+                <Header className='me' style={{ fontSize: '50px' }}>Jquilesjr</Header>
+            </Link>
+            <Toolbar color='secondary'>
+                <Container>
+                    <Box maxWidth='100%' style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+                        <a href='https://github.com/JohnnyQuiles' style={{ color: 'white', fontSize: '50px', }} className='logo'><AiOutlineGithub /></a>
+                        <a href='https://www.facebook.com/profile.php?id=100071113208049' style={{ color: '#4267B2', fontSize: '50px', }} className='logo'><AiOutlineFacebook /></a>
+                        <a href='https://www.instagram.com/?hl=en' style={{ color: '#fb3958', fontSize: '50px', }} className='logo'><AiOutlineInstagram /></a>
+                        <a href='https://www.linkedin.com/in/johnny-quiles-618976191/' style={{ color: '#0077b5', fontSize: '50px', }} className='logo'><AiOutlineLinkedin /></a>
+                    </Box>
+                </Container>
+            </Toolbar>
+        </>
+        )
 };
 
 export default NavBar;

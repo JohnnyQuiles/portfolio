@@ -3,18 +3,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
 .App {
-  background:#011627;
+  background-color: #011627;
 }
 
-.logo{
-  color: crimson;
+.logo {
+  color: #04e762;
   font-family: 'Libre Barcode 39 Text', cursive;
   text-align: center;
-  
 }
-.logo:hover{
-  transition: transform 500ms ease-in-out;
-  animation: dance 1s linear infinite 250ms;
+
+.logo:hover {
+  transition: transform 62ms ease-in-out;
+  animation: dance 1s linear infinite 125ms;
+}
+
+.me {
+  color: #04e762;
+  font-family: 'Libre Barcode 39 Text', cursive;
+  text-align: center;
+  animation-name: color-change;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.divider{
+  display: flex;
+  justify-content: flex-start;
+  font-family: 'Racing Sans One', cursive;
+  color: #000000;
+  background: white;
+  border-radius: 5px;
+  width: 50%;
 }
 
 .navbar {
@@ -22,22 +41,65 @@
   text-decoration: none;
   color: #F7F9F7;
 }
+
 .navbar:hover {
   color: crimson;
 }
 
-.sub{
+.sub {
   text-align: center;
   font-family: 'Bungee Shade', cursive;
+  color: #000000
 }
 
-.span{
-  color: crimson;
+.span {
+  font-family: 'Bungee Shade', cursive;
+  animation-name: color-change;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.container {
+  background:#F7F9F7;
+  
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  font-family: 'Racing Sans One', cursive;
 }
 
 @keyframes dance {
-  0% {transform: rotate(0);}
-  25%{transform: rotate(15deg);}
-  50%{transform: rotate(-0);}
-  75%{transform: rotate(-15deg);}
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(15deg);
+  }
+
+  50% {
+    transform: rotate(-0);
+  }
+
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: #04e762;
+  }
+
+  25% {
+    color: #a1ff0a;
+  }
+
+  50% {
+    color: #0aefff;
+  }
+
+  100% {
+    color: #deff0a;
+  }
 }

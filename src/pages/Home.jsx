@@ -1,38 +1,50 @@
 import React from 'react';
-import Layout from '../component/Layout';
-import { AiOutlineGithub } from "@react-icons/all-files/ai/AiOutlineGithub";
-import { AiOutlineFacebook } from "@react-icons/all-files/ai/AiOutlineFacebook"
-import { AiOutlineInstagram } from "@react-icons/all-files/ai/AiOutlineInstagram";
-import { AiOutlineLinkedin } from '@react-icons/all-files/ai/AiOutlineLinkedin'
-import { Box } from '@mui/material';
-import Me from '../images/me.jpeg'
+import { Popover, Divider, Placeholder, Notification, Message,} from 'rsuite';
+import NavBar from '../component/NavBar';
 import '../App.css';
+import { Box } from '@mui/material';
+
+
 
 const Home = () => {
+
     return (
-        <Layout>
-            <br />
-
-            <h1 className='sub'>Hello, my name is <br />
-                <span className='span'>Johnny Quiles</span></h1>
+        <>
+            <NavBar />
             
-            <Box height='48vh' maxWidth='100%' style={{ display: 'flex', justifyContent: 'center' }}>
-                <img src={Me} alt='Me' style={{ borderRadius: '3px' }}></img>
-            </Box>
 
-            <br />
-            <br />
+                <Notification closable type="info" header="About Me">
+                    <Placeholder.Paragraph style={{ width: 320 }} rows={3} />
+                    <h3>I'm a software developer that</h3>
+                    <h3>builds with<span className='span'> no limitations!</span></h3>
+                </Notification>
 
-            <Box maxWidth='100%' style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-                <a href='https://github.com/JohnnyQuiles' style={{ color: 'black', fontSize: '50px', }} className='logo'><AiOutlineGithub /></a>
-                <a href='https://www.facebook.com/profile.php?id=100071113208049' style={{ color: '#4267B2', fontSize: '50px', }} className='logo'><AiOutlineFacebook /></a>
-                <a href='https://www.instagram.com/?hl=en' style={{ color: '#fb3958', fontSize: '50px', }} className='logo'><AiOutlineInstagram /></a>
-                <a href='https://www.linkedin.com/in/johnny-quiles-618976191/' style={{ color: '#0077b5', fontSize: '50px', }} className='logo'><AiOutlineLinkedin /></a>
-            </Box>
+            
 
-        </Layout>
+        </>
+
+
+
+
+
     )
 };
 
 
 export default Home;
+// eslint-disable-next-line no-lone-blocks
+{/* <NavBar /> */ }
+
+// eslint-disable-next-line no-lone-blocks
+{/* <br />
+
+<Box maxWidth='100%'sx={{ display: 'flex', justifyContent: 'center' }}>
+<Card className='card'>
+<h1 className='sub'>Hello, my name is <br /> <span className='span'>Johnny Quiles</span></h1>
+<h3 style={{ alignItems: 'center', display: 'flex', justifyContent: 'center' }}>
+    I'm a junior software developer that 
+    <br /> 
+    enjoys building with nolimitations!
+    </h3>
+</Card>
+</Box> */}
